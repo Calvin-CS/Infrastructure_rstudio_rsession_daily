@@ -14,6 +14,3 @@ RUN /root/cs-populate-users.sh && \
 
 # Make a temporary link from /init to /usr/bin/bash
 RUN ln -s /usr/bin/bash /init
-
-# Reset entrypoint
-ENTRYPOINT ["/usr/bin/bash", "-l", "-c"]
