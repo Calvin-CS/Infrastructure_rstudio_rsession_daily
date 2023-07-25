@@ -12,5 +12,8 @@ COPY --chmod=0755 inc/cs-populate-users.sh /root
 RUN /root/cs-populate-users.sh && \
     rm -f /root/.wgetrc
 
+# Make a temporary link from /init to /usr/bin/bash
+RUN ln -s /usr/bin/bash /init
+
 # Reset entrypoint
 ENTRYPOINT ["/usr/bin/bash", "-l", "-c"]
