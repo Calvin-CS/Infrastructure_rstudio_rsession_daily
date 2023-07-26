@@ -14,3 +14,6 @@ RUN --mount=type=secret,id=HTPASSWD_CSWEB_WGET \
 COPY --chmod=0755 inc/cs-populate-users.sh /root
 RUN /root/cs-populate-users.sh && \
     rm -f /root/.wgetrc
+
+# set command
+CMD ["/usr/lib/rstudio-server/bin/rserver-launcher"]
