@@ -2,7 +2,7 @@ FROM calvincs.azurecr.io/rsession-base:latest
 LABEL maintainer="Chris Wieringa <cwieri39@calvin.edu>"
 
 # Environment Variables
-ARG BUILDDATE=20230725-1
+ARG BUILDDATE=20230726-1
 
 # Container settings
 SHELL ["/bin/bash", "-c"] 
@@ -14,6 +14,3 @@ RUN --mount=type=secret,id=HTPASSWD_CSWEB_WGET \
 COPY --chmod=0755 inc/cs-populate-users.sh /root
 RUN /root/cs-populate-users.sh && \
     rm -f /root/.wgetrc
-
-# set command
-CMD ["/usr/lib/rstudio-server/bin/rserver-launcher"]
