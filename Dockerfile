@@ -2,7 +2,7 @@ FROM calvincs.azurecr.io/rsession-base:latest
 LABEL maintainer="Chris Wieringa <cwieri39@calvin.edu>"
 
 # Environment Variables
-ARG BUILDDATE=20250207-1
+ARG BUILDDATE=20250207-2
 
 # Container settings
 SHELL ["/bin/bash", "-c"] 
