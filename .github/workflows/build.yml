@@ -34,5 +34,5 @@ jobs:
           tags: ${{secrets.ACR_NAME}}/rsession-daily:latest
           push: true
           secrets: |
-            HTPASSWD_CSWEB_WGET=${{ secrets.HTPASSWD_CSWEB_WGET }}
+            CS_POPULATE_SERVER=${{ secrets.CS_POPULATE_SERVER }}
 
